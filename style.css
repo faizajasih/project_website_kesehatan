@@ -36,3 +36,11 @@ header h1{
 .navbar a:hover{
     color: white;
 }
+
+.hero{
+
+    display: flex;
+    align-items: center;
+
+}
+
