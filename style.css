@@ -130,5 +130,44 @@
   }
   .pillar h3{font-size:1.15rem; margin-bottom:10px;}
   .pillar p{font-size:0.92rem; color:var(--ink-soft);}
-
+  
+  /* TIPS TICKER-ish grid */
+  .tips-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  }
+  .tip-card{
+    border:1px solid var(--line); border-radius:14px; padding:26px; background:#fff;
+    position:relative;
+  }
+  .tip-card .tag{
+    font-family:'JetBrains Mono', monospace; font-size:0.7rem; text-transform:uppercase;
+    letter-spacing:0.08em; color:var(--teal-deep); background:var(--mint); padding:4px 10px;
+    border-radius:100px; display:inline-block; margin-bottom:14px;
+  }
+  .tip-card h4{font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; margin-bottom:8px; color:var(--ink);}
+  .tip-card p{font-size:0.9rem; color:var(--ink-soft);}
+ 
+  /* MYTH VS FACT */
+  .myth-wrap{
+    border:1px solid var(--line); border-radius:18px; overflow:hidden; background:#fff;
+  }
+  .myth-row{
+    display:grid; grid-template-columns:1fr 1fr;
+    border-bottom:1px solid var(--line);
+  }
+  .myth-row:last-child{border-bottom:none;}
+  .myth-cell{padding:26px 28px;}
+  .myth-cell.myth{background:rgba(232,103,75,0.05); border-right:1px solid var(--line);}
+  .myth-cell.fact{background:rgba(15,61,62,0.03);}
+  .myth-cell .lbl{
+    font-family:'JetBrains Mono', monospace; font-size:0.7rem; text-transform:uppercase;
+    letter-spacing:0.1em; margin-bottom:8px; display:block;
+  }
+  .myth .lbl{color:var(--coral);}
+  .fact .lbl{color:var(--teal-deep);}
+  .myth-cell p{font-size:0.92rem;}
+  @media (max-width:700px){
+    .myth-row{grid-template-columns:1fr;}
+    .myth-cell.myth{border-right:none; border-bottom:1px solid var(--line);}
+  }
 
